@@ -1,0 +1,44 @@
+@use "variables" as var;
+
+// // //デザインカンプ（px）からvwを算出用
+// @media screen and (max-width: 599px) {
+//     @function vw($pixelsVw) {
+//         @return $pixelsVw / var.$baseWidthSP * 100vw;
+//     }
+// }
+
+// @media screen and (min-width: 600px) and (max-width: 1024px) {
+//      @function vw($pixelsVw) {
+//          @return $pixelsVw / var.$baseWidthTB * 100vw;
+//  }
+// }
+
+//  @media screen and (min-width: 1025px) {
+//      @function vw($pixelsVw) {
+//          @return $pixelsVw / var.$baseWidthPC * 100vw;
+//  }
+// }
+
+// @function vw($pixelsVw) {
+//     @if @media screen and (min-width: 600px) {
+//         @return $pixelsVw / var.$baseWidthTB * 100vw;
+//     }
+//     @elseif @media screen and (min-width: 1025px) {
+//         @return $pixelsVw / var.$baseWidthPC * 100vw;
+//     }
+//     @else {
+//         @return $pixelsVw / var.$baseWidthSP * 100vw;
+//     }
+// }
+
+@function vw($pixelsVw) {
+    @return $pixelsVw / var.$baseWidthSP * 100vw;
+}
+
+@function tabvw($pixelsVw) {
+    @return $pixelsVw / var.$baseWidthTB * 100vw;
+}
+
+@function pcvw($pixelsVw) {
+    @return $pixelsVw / var.$baseWidthPC * 100vw;
+}

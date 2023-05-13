@@ -1,0 +1,44 @@
+@use "../../foundation/global" as g;
+
+.p-imgList {
+    display: flex;
+    flex-direction: column;
+    margin: g.vw(30) g.vw(20);
+    gap: g.vw(20);
+    @include g.mq(tab) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: g.tabvw(60);
+        justify-content: space-between;
+        gap: 0;
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(60) g.pcvw(100);
+    }
+    &__item {
+        width: g.vw(335);
+        height: g.vw(205);
+        @include g.mq(tab) {
+            width: g.tabvw(349);
+            height: g.tabvw(205);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(438);
+            height: g.pcvw(257);
+        }
+        > img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        //最後の画像にはmargin-bottomつけない
+        &:not(:last-child) {
+            @include g.mq(tab) {
+                margin-bottom: g.tabvw(20);
+            }
+            @include g.mq(pc) {
+                margin-bottom: g.pcvw(20);
+            }            
+        }
+    }
+}

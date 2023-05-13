@@ -1,0 +1,16 @@
+@use "../../foundation/global" as g;
+
+.p-header {
+    &__title {
+        margin: g.vw(40) auto;
+        @include g.mq(tab) {
+            margin: g.tabvw(38) auto;
+            font-size: g.tabvw(40);
+            line-height: g.tabvw(47);
+        }
+        @include g.mq(pc) {
+            margin:0;
+            font-size: g.pcvw(64);
+        }
+    }
+}

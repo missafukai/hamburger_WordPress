@@ -1,0 +1,13 @@
+@use "../../foundation/global" as g;
+
+.c-title {
+    color: g.$sub_text;
+    &--jp {
+        font-family: 'M+ 1m', sans-serif;
+        font-weight: 700;
+        font-size: g.vw(36);
+        @include g.mq(tab) {
+            font-size: g.tabvw(36);
+        }
+    }
+}

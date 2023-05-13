@@ -1,0 +1,29 @@
+@use "../foundation/global" as g;
+
+.l-menu {
+    position: fixed;
+    overflow-y: scroll;  
+    top: 0;
+    right: 0;
+    background-color: g.$menu_bg;
+    width: g.vw(328);
+    height: 100vh;
+    transform: translateX(g.vw(328));
+    transition: transform .3s;
+    @include g.mq(tab) {
+        width: g.tabvw(367);
+        transform: translateX(g.tabvw(367));
+    }
+    @include g.mq(pc) {
+        display: block;
+        position: static;
+        height: auto;
+        transform: translateX(0);
+    }
+    &.active {
+        display: block;
+        z-index: 100;
+        transform: translateX(0);
+        transition: transform .3s;
+    }
+}

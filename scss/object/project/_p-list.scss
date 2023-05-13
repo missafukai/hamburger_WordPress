@@ -1,0 +1,39 @@
+@use "../../foundation/global" as g;
+
+.p-list {
+    margin: g.vw(20);
+    text-align: left;
+    @include g.mq(tab) {
+        margin: 0;
+        margin-bottom: g.tabvw(17);
+    }
+    @include g.mq(pc) {
+        margin-bottom: 0;
+    }
+    &__wrapper {
+        @include g.mq(tab) {
+            margin: g.tabvw(60) g.tabvw(110);
+        }
+        @include g.mq(pc) {
+            margin: g.pcvw(55) g.pcvw(150);
+        }
+    }
+    &.--nesting {
+        @include g.mq(tab) {
+            margin: g.tabvw(18);
+        }
+        @include g.mq(pc) {
+            margin: g.pcvw(18);
+        }
+    }
+}
+
+.u-mb--60.p-list {
+    margin-bottom: g.vw(60);
+    @include g.mq(tab) {
+        margin-bottom: 0;
+    }
+    @include g.mq(pc) {
+        margin-bottom: 0;
+    }
+}

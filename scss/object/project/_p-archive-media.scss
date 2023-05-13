@@ -1,0 +1,95 @@
+@use "../../foundation/global" as g;
+
+.p-archive-media {
+    color: #fff;
+    margin: g.vw(20);
+    text-align: left;
+    @include g.mq(tab) {
+        display: flex;
+        align-items: stretch;
+        margin: g.tabvw(20) g.tabvw(35) g.tabvw(20) g.tabvw(42);
+    }
+    @include g.mq(pc) {
+        margin: 0 g.pcvw(100) g.pcvw(30) g.pcvw(100);
+    }
+    &__img-wrapper {
+        width: 100%;
+        height: g.vw(230.53);
+        overflow: hidden;
+        @include g.mq(tab) {
+            width: 50%;
+            height: g.tabvw(354.5);
+        }
+        @include g.mq(pc) {
+            width: 50%;
+            height: g.pcvw(471);
+        }
+    }
+    &__img{
+        width: 125%;
+        object-fit: cover;
+        object-position: -8.5vw;
+        @include g.mq(tab) {
+            width: 168%;
+            object-position: -11.5vw;
+        }
+        @include g.mq(pc) {
+            width: 127%;
+            object-position: -3.5vw;
+        }
+    }
+    &__body {
+        background-color: g.$media_bg;
+        padding: g.vw(32.47) g.vw(17) g.vw(4) g.vw(17);
+        @include g.mq(tab) {
+            width: 50%;
+            padding: g.tabvw(31) g.tabvw(60) 0 g.tabvw(35);
+        }
+        @include g.mq(pc) {
+            width: 50%;
+            padding: g.pcvw(56) g.pcvw(105) 0 g.pcvw(63);
+        }
+    }
+    &__title {
+        margin-bottom: g.vw(21);
+        @include g.mq(tab) {
+            margin-bottom: g.tabvw(21);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(36);
+            line-height: g.pcvw(53.46);
+            margin-bottom: g.pcvw(44);
+        }
+    }
+    &__subtitle { 
+        font-weight: 700;
+        margin-bottom: g.vw(7);
+        @include g.mq(tab) {
+            margin-bottom: g.tabvw(7);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(24);
+            line-height: g.pcvw(35.64);
+            margin-bottom: g.pcvw(13);
+        }
+    }
+    &__button {
+        display: block;
+        margin: g.vw(40) auto;
+        text-align: center;
+        width: g.vw(163.16);
+        height: g.vw(42.47);
+        font-weight: 700;
+        @include g.mq(tab) {
+            width: g.tabvw(163.16);
+            height: g.tabvw(42.47);
+            margin-top: g.tabvw(45);
+            margin-bottom: g.tabvw(40);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(292);
+            height: g.pcvw(76);
+            margin: g.pcvw(60) auto;
+        }
+    }
+}

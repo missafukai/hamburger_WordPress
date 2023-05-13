@@ -1,0 +1,33 @@
+@use "variables" as var;
+
+//media queryの記載用
+@mixin mq($bp) {
+    @media #{map-get(var.$breakpoint, $bp)} {
+        @content;
+    }
+}
+
+// @mixin respond-to($media) {
+//     @media #{$media} {
+//       @content;
+//     }
+//   }
+
+// @mixin sp {
+//     @include respond-to(max-width $sp) {
+//         @content;
+//     }
+// }
+
+// @mixin tab {
+//     @include respond-to(min-width $sp + 1) and (max-width $tab) {
+//         @content;
+//     }
+// }
+
+// @mixin pc {
+//     @include respond-to(min-width $tab + 1) {
+//         @content;
+//     }
+// }
+

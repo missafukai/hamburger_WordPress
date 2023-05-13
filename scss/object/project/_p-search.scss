@@ -1,0 +1,93 @@
+@use "../../foundation/global" as g;
+
+.p-search {
+    display: flex;
+    align-items: center;
+    width: g.vw(322);
+    height: g.vw(46);
+    margin: g.vw(40) auto;
+    @include g.mq(tab) {
+        margin: g.tabvw(38) auto;
+        width: g.tabvw(546);
+        height: g.tabvw(46);
+    }
+    @include g.mq(pc) {
+        margin: 0;
+        width: g.pcvw(546);
+        height: g.pcvw(46);
+    }
+    &__wrapper {
+        display: inline-block;
+        position: relative;
+        height: g.vw(46);
+        width: g.vw(216);
+        @include g.mq(tab) {
+            width: g.tabvw(396);
+            height: g.tabvw(46);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(396);
+            height: g.pcvw(46);
+        }
+        &::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: g.vw(12);
+            left: g.vw(9);
+            width: g.vw(24);
+            height: g.vw(23.76);
+            background-image: url("../../../img/search.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            z-index: 1;
+            @include g.mq(tab) {
+                top: g.tabvw(12);
+                left: g.tabvw(12);
+                width: g.tabvw(24);
+                height: g.tabvw(24);
+            }
+            @include g.mq(pc) {
+                top: g.pcvw(12);
+                left: g.pcvw(12);
+                width: g.pcvw(24);
+                height: g.pcvw(24);
+            }
+        }    
+    }
+    &__input {
+        width: g.vw(216);
+        height: 100%;
+        font-weight: 700;
+        @include g.mq(tab) {
+            width: g.tabvw(396);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(396);
+        }
+    }
+    &__submit {
+        height: g.vw(46);
+        width: g.vw(90);
+        font-weight: 700;
+        line-height: g.vw(24);
+        color: g.$sub_text;
+        margin-left: g.vw(16);
+        padding-top: 2.8vw;
+        @include g.mq(tab) {
+            width: g.tabvw(136);
+            height: g.tabvw(46);
+            margin-left: g.tabvw(14);
+            line-height: g.tabvw(24);
+            padding-top: g.tabvw(12);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(136);
+            height: g.pcvw(46);
+            margin-left: g.pcvw(14);
+            line-height: g.pcvw(24);
+            padding-top: g.pcvw(11);
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@use "../../foundation/global" as g;
+
+.p-pager {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: g.vw(61.88) g.vw(20) g.vw(32) g.vw(20);
+    color: g.$sub_text;
+    @include g.mq(tab) {
+        margin: g.tabvw(106.5) g.tabvw(122) g.tabvw(32) g.tabvw(122);
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(150) g.pcvw(477) g.pcvw(64) g.pcvw(477);
+    }
+
+    &__pagenumber {
+        display: none;
+        @include g.mq(tab) {
+            display: block;
+            font-family: "Roboto";
+            font-weight: 700;
+        }
+        @include g.mq(pc) {
+            margin-right: g.pcvw(10);
+        }
+    }
+    &__item {
+        display:none;
+        @include g.mq(tab) {
+            display: block;
+            font-family: "Roboto";
+            font-weight: 700;
+            width: g.tabvw(35);
+            height: g.tabvw(35);
+            padding-top: g.tabvw(5);
+            border: g.tabvw(1) solid g.$sub_text;
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(35);
+            height: g.pcvw(35);
+            padding-top: g.pcvw(5);
+            border: g.pcvw(1) solid g.$sub_text;
+        }
+        & a {
+            @include g.mq(tab) {
+                display: block;
+            }
+            @include g.mq(pc) {
+                display: block;
+            }
+        }
+        &.active {
+            @include g.mq(tab) {
+                color: #fff;
+                background-color: g.$main_text;
+            }
+        }
+    }
+
+    &__prev, &__next {
+        width: g.vw(57.71);
+        text-align: center;
+        @include g.mq(tab) {
+            width: g.tabvw(20);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(20);
+        }
+        & a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__arrow {
+        width: g.vw(12);
+        height: g.vw(12);
+        @include g.mq(tab) {
+            width: g.tabvw(12);
+            height: g.tabvw(12);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(12);
+            height: g.pcvw(12);
+        }
+        &::after {
+            top: g.vw(5);
+            left: g.vw(5);
+            width: g.vw(12);
+            height: g.vw(12);
+            @include g.mq(tab) {
+                top: g.tabvw(5);
+                left: g.tabvw(5);
+                width: g.tabvw(12);
+                height: g.tabvw(12);
+            }
+            @include g.mq(pc) {
+                top: g.pcvw(5);
+                left: g.pcvw(5);
+                width: g.pcvw(12);
+                height: g.pcvw(12);
+            }
+        }
+    }
+    &__arrow.--left {
+        margin-right: g.vw(10);
+        @include g.mq(tab) {
+            margin-right: 0;
+        }
+        @include g.mq(pc) {
+            margin-right: 0;
+        }
+    }
+    &__arrow.--right {
+        margin-left: g.vw(10);
+        @include g.mq(tab) {
+            margin-left: 1vw;
+        }
+        @include g.mq(pc) {
+            margin-left: 0;
+        }
+    }
+
+    //スマホ幅のときだけ表示
+    &--sp {
+        @include g.mq(tab) {
+            display: none;
+        }
+        @include g.mq(pc) {
+            display: none;
+        }
+    }
+}

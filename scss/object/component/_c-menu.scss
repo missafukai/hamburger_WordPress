@@ -1,0 +1,20 @@
+@use "../../foundation/global" as g;
+
+.c-menu {
+    position: absolute;
+    top: g.vw(8);
+    right: g.vw(8);
+    display: block;
+    color: g.$sub_text;
+    font-family: "Roboto";
+    font-size: g.vw(20);
+    font-weight: 700;
+    text-align: right;
+    @include g.mq(tab) {
+        font-size: g.tabvw(34);
+        line-height: g.tabvw(40);
+    }
+    @include g.mq(pc) {
+        display: none;
+    }
+}

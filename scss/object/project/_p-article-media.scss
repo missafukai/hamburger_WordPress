@@ -1,0 +1,60 @@
+@use "../../foundation/global" as g;
+
+.p-article-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: g.vw(30) g.vw(20);
+    @include g.mq(tab) {
+        margin: g.tabvw(60);
+        margin-bottom: g.tabvw(110);
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(60) g.pcvw(110);
+        margin-bottom: g.pcvw(60);
+        min-height: g.pcvw(358);
+    }
+    &__img-wrapper {
+      width: g.vw(144);
+      height: g.vw(89);
+      @include g.mq(tab) {
+          width: g.tabvw(306);
+          height: g.tabvw(189);
+      }
+      @include g.mq(pc) {
+          width: g.pcvw(581);
+          height: g.pcvw(358);
+      }
+    }
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        height: 100%;
+    }
+    &__body {
+        width: g.vw(183);
+        text-align: left;
+        text-indent: g.vw(8);
+        @include g.mq(tab) {
+            width: g.tabvw(387);
+            text-indent: g.tabvw(8);
+        }
+        @include g.mq(pc) {
+            width: g.pcvw(733);
+            text-indent: g.pcvw(8);
+        }
+    }
+    &.--rev {
+        flex-direction: row-reverse;
+    }
+    //最後のメディアのスペース調整用
+    &.--last {
+        @include g.mq(tab) {
+            margin-bottom: g.tabvw(60);
+        }
+        @include g.mq(pc) {
+            margin-bottom: 0;
+        }
+    }
+}

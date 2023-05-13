@@ -1,0 +1,121 @@
+@use "../../foundation/global" as g;
+
+.p-card {
+    margin: g.vw(20);
+    padding: g.vw(16);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    @include g.mq(tab) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: g.tabvw(357);
+        margin: 0;
+        padding: g.tabvw(16);
+    }
+    @include g.mq(pc) {
+        width: g.pcvw(625);
+        margin: 0;
+        padding: g.pcvw(20);
+    }
+    &__title {
+        color: #fff;
+        font-size: g.vw(41);
+        height: g.vw(266);
+        line-height: g.vw(48);
+        @include g.mq(tab) {
+            font-size: g.tabvw(44);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(80);
+            line-height: g.pcvw(93.75);
+            height: g.pcvw(776);
+        }
+        > h1 {
+            position: relative;
+            @include g.mq(pc) {
+                font-size: g.pcvw(80);
+                line-height: g.pcvw(93.75);
+            }    
+            &::after {
+                content: "";
+                display: block;
+                width: g.vw(33.89);
+                height: g.vw(4);
+                background-color: #fff;
+                position: absolute;
+                bottom: g.vw(-20);
+                left: g.vw(0);
+                @include g.mq(tab) {
+                    bottom: g.tabvw(-25);
+                    width: g.tabvw(36);
+                    height: g.tabvw(4);
+                }
+                @include g.mq(pc) {
+                    bottom: g.pcvw(-40);
+                    width: g.pcvw(63);
+                    height: g.pcvw(4);
+                }
+            }
+        }
+    }
+    &.--takeout {
+        background-image: url("../../../img/three-burgers.png");
+    }
+    &.--eatin {
+        background-image: url("../../../img/bacon-burger.png");
+    }
+    &__contents {
+        @include g.mq(tab) {
+            margin-top: auto;
+        }
+    }
+    &__content {
+        margin-top: g.vw(16); 
+        padding: g.vw(16);
+        background-color: rgb(255 255 255 / .8);
+        @include g.mq(tab) {
+            padding: g.tabvw(16);
+            margin-top: g.tabvw(16);
+            font-size: g.tabvw(14);
+            line-height: g.tabvw(20.79);
+        }
+        @include g.mq(pc) {
+            padding: g.pcvw(14) g.pcvw(20);
+            margin-top: g.pcvw(20);
+            font-size: g.pcvw(16);
+            line-height: g.pcvw(23.76);
+        }
+        > h3 {
+            margin-bottom: g.vw(8);
+            @include g.mq(tab) {
+                margin-bottom: g.tabvw(16);
+                font-size: g.tabvw(24);
+                line-height: g.tabvw(24);
+            }
+            @include g.mq(pc) {
+                margin-bottom: g.pcvw(18);
+                font-size: g.pcvw(24);
+                line-height: g.pcvw(24);
+            }
+        }
+    }
+    &__container {
+        @include g.mq(tab){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            margin: g.tabvw(40);
+        }
+        @include g.mq(pc){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            margin: g.pcvw(120) g.pcvw(112) g.pcvw(130) g.pcvw(112);
+        }
+    }
+}

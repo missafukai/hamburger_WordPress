@@ -1,0 +1,11 @@
+@use "../../foundation/global" as g;
+
+.c-list.--ordered {
+    counter-reset: count 0;
+    & li {
+        &::before{
+        content: counter(count) ".";
+        counter-increment: count 1;
+        }
+    }
+}

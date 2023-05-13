@@ -1,0 +1,49 @@
+@use "../../foundation/global" as g;
+
+.p-table {
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #fff;
+    &__column {
+        border: g.vw(1) solid g.$sub_text;
+        padding: g.vw(30);
+        @include g.mq(tab) {
+            border: g.tabvw(1) solid g.$sub_text;
+            padding: g.tabvw(30);
+            padding-top: g.tabvw(33);
+        }
+        @include g.mq(pc) {
+            border: g.pcvw(1) solid g.$sub_text;
+            padding: g.pcvw(30);
+            padding-top: g.pcvw(33);
+        }
+        &.--1 {
+            width: g.vw(135);
+            @include g.mq(tab) {
+                width: g.tabvw(215);
+            }
+            @include g.mq(pc) {
+                width: g.pcvw(429);
+            }
+        }
+        &.--2 {
+            width: g.vw(200);
+            @include g.mq(tab) {
+                width: g.tabvw(499);
+            }
+            @include g.mq(pc) {
+                width: g.pcvw(929);
+            }
+        }
+    }
+    &__wrapper {
+        margin: g.vw(30) g.vw(20);
+        margin-bottom: g.vw(60);
+        @include g.mq(tab) {
+            margin: g.tabvw(60);
+        }
+        @include g.mq(pc) {
+            margin: g.pcvw(50) g.pcvw(100) g.pcvw(60) g.pcvw(100);
+        }
+    }
+}

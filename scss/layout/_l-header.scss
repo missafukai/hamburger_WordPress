@@ -1,0 +1,22 @@
+@use "../foundation/global" as g;
+
+.l-header {
+    position: relative;
+    width: 100%;
+    height: g.vw(215);
+    background-color: #FFF7EF;
+    text-align: center;
+    padding: g.vw(3);
+    @include g.mq(tab) {
+        height:g.tabvw(217);
+        padding: g.tabvw(2);
+    }
+    @include g.mq(pc) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: g.pcvw(217);
+        padding: g.pcvw(66) g.pcvw(31) g.pcvw(67) g.pcvw(65);
+    }
+}
+

@@ -1,0 +1,22 @@
+//デザインカンプの幅
+$baseWidthSP: 375;
+$baseWidthTB: 834;
+$baseWidthPC: 1920;
+
+//メディアクエリ、ブレイクポイント
+$breakpoint: (
+    tab: 'screen and (min-width: 600px)',
+    pc: 'screen and (min-width: 1025px)'
+);
+
+$sp: 599px;
+$tab: 1024px;
+
+//色
+$main_text: #3C2A10;
+$sub_text: #707070;
+$header_bg: #FFF7EF;
+$menu_bg: #F2EDE9;
+$media_bg: #3C2B1C;
+$quote_bg: #F5F5F5;
+$main_bg: #FFFDFA;

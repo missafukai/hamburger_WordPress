@@ -1,0 +1,12 @@
+@use "../../foundation/global" as g;
+
+.p-headline {
+    text-align: left;
+    margin: g.vw(30) g.vw(20);
+    @include g.mq(tab) {
+        margin: g.tabvw(55) g.tabvw(60);
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(55) g.pcvw(100);
+    }
+}

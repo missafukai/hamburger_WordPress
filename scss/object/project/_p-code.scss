@@ -1,0 +1,18 @@
+@use "../../foundation/global" as g;
+
+.p-code {
+    &__wrapper {
+    background-color: #F5F5F5;
+    margin: g.vw(30) g.vw(20);
+    padding: g.vw(20) g.vw(50);
+    text-align: left;
+    @include g.mq(tab) {
+        margin: g.tabvw(60);
+        padding: g.tabvw(20) g.tabvw(50);
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(50) g.pcvw(100);
+        padding: g.pcvw(20) g.pcvw(50);
+    }
+    }
+}

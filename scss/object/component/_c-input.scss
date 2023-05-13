@@ -1,0 +1,23 @@
+@use "../../foundation/global" as g;
+
+.c-input {
+    &--search {
+        position: relative;
+        border: g.vw(1) solid #707070;
+        border-radius: g.vw(10);
+        background-color: #ffffff;
+        padding: g.vw(12) g.vw(12) g.vw(12) g.vw(42);
+        text-align: left;
+        color: g.$sub_text;
+        @include g.mq(tab) {
+            border: g.tabvw(1) solid #707070;
+            border-radius: g.tabvw(10);
+            padding: g.tabvw(11) g.tabvw(12) g.tabvw(11) g.tabvw(42);
+        }
+        @include g.mq(pc) {
+            border: g.pcvw(1) solid #707070;
+            border-radius: g.pcvw(10);
+            padding: g.pcvw(11) g.pcvw(12) g.pcvw(11) g.pcvw(42);
+        }
+    }
+}

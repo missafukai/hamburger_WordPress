@@ -1,0 +1,95 @@
+@use "../../foundation/global" as g;
+
+.p-about {
+    position: relative;
+    margin-top: g.vw(50);
+    padding: g.vw(40);
+    padding-bottom: g.vw(57);
+    width: 100%;
+    background-color: #000;
+    background-image: url("../../../img/map_sp.png");
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    color: #fff;
+    @include g.mq(tab) {
+        background-image: url("../../../img/map.png");
+        padding: g.tabvw(42) g.tabvw(29) g.tabvw(40) g.tabvw(42);
+        margin-top: 0;
+    }
+    @include g.mq(pc) {
+        background-image: url("../../../img/map.png");
+        padding: g.pcvw(86) g.pcvw(737) g.pcvw(60) g.pcvw(119);
+        margin-top: 0;
+    }
+    &__title {
+        position: relative;
+        line-height: g.vw(45);
+        z-index: 10;
+        @include g.mq(tab) {
+            font-size: g.tabvw(30);
+            line-height: g.tabvw(45);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(36);
+            line-height: g.pcvw(53.46);
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: g.vw(75);
+            height: g.vw(2);
+            background-color: #fff;
+            position: absolute;
+            bottom: g.vw(-15);
+            left: g.vw(0);
+            z-index: 10;
+            @include g.mq(tab) {
+                width: g.tabvw(75);
+                height: g.tabvw(2);
+                bottom: g.tabvw(-15);
+            }
+            @include g.mq(pc) {
+                width: g.pcvw(75);
+                height: g.pcvw(2);
+                bottom: g.pcvw(-55);
+            }
+        }
+    }
+    &__description {
+        position: relative;
+        margin-top: g.vw(29);
+        font-size: g.vw(14);
+        font-weight: 700;
+        line-height: g.vw(33);
+        z-index: 10;
+        @include g.mq(tab) {
+            font-size: g.tabvw(14);
+            line-height: g.tabvw(33);
+            margin-top: g.tabvw(29);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(16);
+            line-height: g.pcvw(33);
+            margin-top: g.pcvw(110);
+        }
+    }
+    &::after {
+        content: "";
+        background-color: rgb(0 0 0 / .29);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: g.vw(415);
+        z-index: 1;
+        @include g.mq(tab) {
+            height: 100%;
+        }
+        @include g.mq(pc) {
+            height: 100%;
+            width: g.pcvw(950);
+        }
+    }
+}

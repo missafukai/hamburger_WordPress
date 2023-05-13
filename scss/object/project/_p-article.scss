@@ -1,0 +1,49 @@
+@use "../../foundation/global" as g;
+
+.p-article {
+    margin: g.vw(32) g.vw(22) 0 g.vw(22);
+    text-align: left;
+    @include g.mq(tab) {
+        margin: g.tabvw(39) g.tabvw(35) g.tabvw(37) g.tabvw(42);
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(62) g.pcvw(100) g.pcvw(70) g.pcvw(100);
+    }
+    &__title {
+        margin-bottom: g.vw(25);
+        color: g.$main_text;
+        @include g.mq(tab) {
+            margin-bottom: g.tabvw(20);
+        }
+        @include g.mq(pc) {
+            margin-bottom: g.pcvw(20);
+        }
+    }
+}
+
+//singleページ限定のCSS
+.--single.p-article {
+    @include g.mq(tab) {
+        margin: g.tabvw(60);
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(62) g.pcvw(100) g.pcvw(70) g.pcvw(100);
+    }
+    &__title {
+        @include g.mq(tab) {
+            margin-bottom: g.tabvw(55);
+        }
+        @include g.mq(pc) {
+            margin-bottom: g.pcvw(57);
+        }
+    }
+}
+
+//pageページ限定のcss（singleと一緒）
+.--page.p-article {
+    @extend .--single, .p-article;
+}
+
+.--page.p-article__title {
+    @extend .--single, .p-article__title;
+}

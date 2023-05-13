@@ -1,0 +1,59 @@
+@use "../../foundation/global" as g;
+
+.p-footer {
+    color: #fff;
+    padding: g.vw(16);
+    @include g.mq(tab) {
+        padding: g.tabvw(30);
+    }
+    @include g.mq(pc) {
+        padding: g.pcvw(41);
+    }
+    > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    > ul > li {
+        font-size: g.vw(18);
+        line-height: g.vw(26.73);
+        @include g.mq(tab) {
+            font-size: g.tabvw(20);
+            line-height: g.tabvw(29.7);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(20);
+            line-height: g.pcvw(29.7);
+        }
+        &:not(:last-child)::after {
+            content: "|";
+            color: #fff;
+            font-size: g.vw(18);
+            margin: 0 g.vw(10);
+            @include g.mq(tab) {
+                font-size: g.tabvw(20);
+                margin: 0 g.tabvw(15);
+            }
+            @include g.mq(pc) {
+                font-size: g.pcvw(20);
+                margin: 0 g.pcvw(10);
+            }
+        }
+    }
+    &__cr {
+        position: absolute;
+        font-size: g.vw(14);
+        bottom: g.vw(16);
+        left: 0;
+        right: 0;
+        @include g.mq(tab) {
+            font-size: g.tabvw(14);
+            bottom: g.tabvw(24);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(14);
+            bottom: g.pcvw(27);
+        }
+    }
+}

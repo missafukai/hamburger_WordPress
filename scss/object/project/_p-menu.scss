@@ -1,0 +1,90 @@
+@use "../../foundation/global" as g;
+
+.p-menu {
+    position: relative;
+    text-align: left;
+    color: g.$sub_text;
+    &__close {
+        position: absolute;
+        top: g.vw(8);
+        right: g.vw(8);
+        width: g.vw(36);
+        height: g.vw(36);
+        @include g.mq(tab) {
+            top: g.tabvw(20);
+            right: g.tabvw(20);
+            width: g.tabvw(35);
+            height: g.tabvw(35);
+        }
+        @include g.mq(pc) {
+            display: none;
+        }
+        &::before, &::after {
+            width: g.vw(6);
+            height: g.vw(45.25);
+            background-color: g.$sub_text;
+            @include g.mq(tab) {
+                width: g.tabvw(6);
+                height: g.tabvw(45.25);
+            }
+        }
+    }
+    &__container {
+        padding: g.vw(178) g.vw(46) g.vw(178) g.vw(46);
+        @include g.mq(tab) {
+            padding: g.tabvw(178) g.tabvw(46) g.tabvw(178) g.tabvw(46);
+        }
+        @include g.mq(pc) {
+            padding: g.pcvw(84) 0 0 g.pcvw(46);
+        }
+        & ul {
+            margin-bottom: g.vw(60);
+            @include g.mq(tab) {
+                margin-bottom: g.tabvw(48);
+            }
+            @include g.mq(pc) {
+                margin-bottom: g.pcvw(48);
+            }
+        }
+    }
+    &__title {
+        display: none;
+        @include g.mq(pc) {
+            display: block;
+            font-size: g.pcvw(34);
+            line-height: g.pcvw(39.84);
+            font-family: "Roboto";
+            margin-bottom: g.pcvw(90);
+        }
+    }
+    &__group {
+       margin-bottom: g.vw(40); 
+       font-size: g.vw(24);
+       @include g.mq(tab) {
+           margin-bottom: g.tabvw(32);
+           font-size: g.tabvw(24);
+           line-height: g.tabvw(35.64);
+       }
+       @include g.mq(pc) {
+           margin-bottom: g.pcvw(32);
+           font-size: g.pcvw(24);
+           line-height: g.pcvw(35.64);
+       }
+    }
+    &__item {
+        padding-left: g.vw(20);
+        margin-bottom: g.vw(20);
+        @include g.mq(tab) {
+            padding-left: g.tabvw(20);
+            margin-bottom: g.tabvw(20);
+            font-size: g.tabvw(20);
+            line-height: g.tabvw(29.7);
+        }
+        @include g.mq(pc) {
+            padding-left: g.pcvw(20);
+            margin-bottom: g.pcvw(20);
+            font-size: g.pcvw(20);
+            line-height: g.pcvw(29.7);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use "../../foundation/global" as g;
+
+.c-close {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}

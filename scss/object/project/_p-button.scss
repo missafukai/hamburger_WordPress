@@ -1,0 +1,29 @@
+@use "../../foundation/global" as g;
+
+.p-button {
+    &.--single {
+        display:block;
+        margin: g.vw(30) auto;
+        width: g.vw(335);
+        height: g.vw(81);
+        padding: g.vw(30);
+        font-weight: 700;
+        @include g.mq(tab) {
+            margin: g.tabvw(60);
+            width: g.tabvw(429);
+            height: g.tabvw(104);
+            padding: g.tabvw(40);
+        }
+        @include g.mq(pc) {
+            margin: g.pcvw(60) g.pcvw(100);
+            width: g.pcvw(429);
+            height: g.pcvw(104);
+            padding: g.pcvw(40);
+        }
+    }
+}
+
+//pageページ限定のcss（singleと一緒）
+.--page.p-button {
+    @extend .p-button, .--single;
+}

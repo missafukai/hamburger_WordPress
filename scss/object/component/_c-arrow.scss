@@ -1,0 +1,29 @@
+@use "../../foundation/global" as g;
+
+.c-arrow {
+    display: block;
+    border-top: g.vw(1) solid g.$sub_text;
+    border-left: g.vw(1) solid g.$sub_text;
+    position: relative;
+    @include g.mq(tab) {
+        border-top: g.tabvw(1) solid g.$sub_text;
+        border-left: g.tabvw(1) solid g.$sub_text;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-top: g.vw(1) solid g.$sub_text;
+        border-left: g.vw(1) solid g.$sub_text;
+        @include g.mq(tab) {
+            border-top: g.tabvw(1) solid g.$sub_text;
+            border-left: g.tabvw(1) solid g.$sub_text;
+        }            
+    }
+    &.--left {
+        transform: rotate(-45deg);
+    }
+    &.--right {
+        transform: rotate(135deg);
+    }
+}
