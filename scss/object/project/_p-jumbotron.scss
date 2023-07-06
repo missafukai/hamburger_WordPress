@@ -137,7 +137,7 @@
 //pageページ限定のCSS（singleと同じ、微調整）
 .--page.p-jumbotron {
     @extend .--single, .p-jumbotron;
-    background-image: url("../../img/store.png");
+    // background-image: url("../../img/store.png");
     @include g.mq(tab) {
         background-position: 50% 48%;
     }

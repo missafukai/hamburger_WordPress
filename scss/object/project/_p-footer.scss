@@ -1,5 +1,5 @@
 @use "../../foundation/global" as g;
-
+//WP化でp-footerからmenu-nav-containerに少し分離
 .p-footer {
     color: #fff;
     padding: g.vw(16);
@@ -9,13 +9,28 @@
     @include g.mq(pc) {
         padding: g.pcvw(41);
     }
-    > ul {
+    &__cr {
+        position: absolute;
+        font-size: g.vw(14);
+        bottom: g.vw(16);
+        left: 0;
+        right: 0;
+        @include g.mq(tab) {
+            font-size: g.tabvw(14);
+            bottom: g.tabvw(24);
+        }
+        @include g.mq(pc) {
+            font-size: g.pcvw(14);
+            bottom: g.pcvw(27);
+        }
+    }
+}
+.menu-nav-container ul {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-    }
-    > ul > li {
+    > li {
         font-size: g.vw(18);
         line-height: g.vw(26.73);
         @include g.mq(tab) {
@@ -39,21 +54,6 @@
                 font-size: g.pcvw(20);
                 margin: 0 g.pcvw(10);
             }
-        }
-    }
-    &__cr {
-        position: absolute;
-        font-size: g.vw(14);
-        bottom: g.vw(16);
-        left: 0;
-        right: 0;
-        @include g.mq(tab) {
-            font-size: g.tabvw(14);
-            bottom: g.tabvw(24);
-        }
-        @include g.mq(pc) {
-            font-size: g.pcvw(14);
-            bottom: g.pcvw(27);
         }
     }
 }

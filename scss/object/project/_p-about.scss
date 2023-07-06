@@ -7,19 +7,19 @@
     padding-bottom: g.vw(57);
     width: 100%;
     background-color: #000;
-    background-image: url("../../../img/map_sp.png");
+    background-image: url("/wp-content/themes/hamburger/img/map_sp.png");
     background-repeat: none;
     background-size: cover;
     background-position: center;
     text-align: left;
     color: #fff;
     @include g.mq(tab) {
-        background-image: url("../../../img/map.png");
+        background-image: url("/wp-content/themes/hamburger/img/map.png");
         padding: g.tabvw(42) g.tabvw(29) g.tabvw(40) g.tabvw(42);
         margin-top: 0;
     }
     @include g.mq(pc) {
-        background-image: url("../../../img/map.png");
+        background-image: url("/wp-content/themes/hamburger/img/map.png");
         padding: g.pcvw(86) g.pcvw(737) g.pcvw(60) g.pcvw(119);
         margin-top: 0;
     }

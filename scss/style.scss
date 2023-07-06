@@ -16,6 +16,7 @@
 @use "layout/l-main";
 @use "layout/l-footer";
 @use "layout/l-menu";
+@use "layout/l-block";
 
 //===========================================================
 // Object
@@ -67,3 +68,9 @@
 
 @use "object/utility/u-bg";
 @use "object/utility/u-mb";
+
+//-----------------------------------------------------------
+// WP-block
+//-----------------------------------------------------------
+
+@use "wp-block/wp-block";

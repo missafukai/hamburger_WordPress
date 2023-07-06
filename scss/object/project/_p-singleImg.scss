@@ -1,26 +1,21 @@
 @use "../../foundation/global" as g;
 
-.p-singleImg--big {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    object-position: 50% 77%;
-    @include g.mq(tab) {
-        object-position: 50% 80%;
-    }
-    &__wrapper {
-        margin: g.vw(30) auto;
-        width: g.vw(335);
+.wp-block-image.is-style-big-image {
+        margin: 0;
         height: g.vw(124);
         @include g.mq(tab) {
-            margin: g.tabvw(60);
-            width: g.tabvw(714);
             height: g.tabvw(264);
         }
         @include g.mq(pc) {
-            margin: g.pcvw(60) g.pcvw(100);
-            width: g.pcvw(1353);
             height: g.pcvw(500);
+        }
+    & > img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: 50% 77%;
+        @include g.mq(tab) {
+            object-position: 50% 80%;
         }
     }
 }

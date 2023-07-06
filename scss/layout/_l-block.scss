@@ -1,0 +1,16 @@
+@use "../foundation/global" as g;
+
+//wordpressのブロックエディタ利用時のレイアウト
+.l-block {
+    margin: g.vw(35) g.vw(20) 0 g.vw(20);
+    padding-bottom: g.vw(70);
+    text-align: left;
+    @include g.mq(tab) {
+        margin: g.tabvw(60) g.tabvw(60) 0 g.tabvw(60);
+        padding-bottom: g.tabvw(150);
+    }
+    @include g.mq(pc) {
+        margin: g.pcvw(60) g.pcvw(100) 0 g.pcvw(100);
+        padding-bottom: g.pcvw(270);
+    }
+}

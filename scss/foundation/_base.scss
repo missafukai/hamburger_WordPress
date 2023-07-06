@@ -109,6 +109,10 @@ h6 {
     }
 }
 
+p {
+    word-wrap: break-word;
+}
+
 code {
     font-size: g.vw(16);
     line-height: g.vw(24);
@@ -121,4 +125,8 @@ code {
         font-size: g.pcvw(16);
         line-height: g.pcvw(24);
     }
+}
+
+ol, ul {
+    list-style-position: inside;
 }
