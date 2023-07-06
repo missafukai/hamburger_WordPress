@@ -1,10 +1,13 @@
 @use "../../foundation/global" as g;
 
-.c-arrow {
+//もと.c-arrow　合併された
+.previouspostslink, .nextpostslink {
     display: block;
     border-top: g.vw(1) solid g.$sub_text;
     border-left: g.vw(1) solid g.$sub_text;
     position: relative;
+    text-indent: 100%;
+    white-space: nowrap;
     @include g.mq(tab) {
         border-top: g.tabvw(1) solid g.$sub_text;
         border-left: g.tabvw(1) solid g.$sub_text;
@@ -20,10 +23,12 @@
             border-left: g.tabvw(1) solid g.$sub_text;
         }            
     }
-    &.--left {
-        transform: rotate(-45deg);
-    }
-    &.--right {
-        transform: rotate(135deg);
-    }
 }
+
+.previouspostslink {
+    transform: rotate(-45deg);
+}
+.nextpostslink {
+    transform: rotate(135deg);
+}
+

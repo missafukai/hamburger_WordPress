@@ -9,7 +9,6 @@
     text-align: left;
     @include g.mq(tab) {
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
         width: g.tabvw(357);
         margin: 0;
@@ -19,6 +18,12 @@
         width: g.pcvw(625);
         margin: 0;
         padding: g.pcvw(20);
+    }
+    & > a {
+        @include g.mq(tab) {
+            display: flex;
+            flex-direction: column;
+        }
     }
     &__title {
         color: #fff;

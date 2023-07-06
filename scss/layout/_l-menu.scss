@@ -15,6 +15,7 @@
         transform: translateX(g.tabvw(367));
     }
     @include g.mq(pc) {
+        overflow-y: hidden;
         display: block;
         position: static;
         height: auto;

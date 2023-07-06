@@ -57,34 +57,38 @@
             margin-bottom: g.pcvw(90);
         }
     }
-    &__group {
-       margin-bottom: g.vw(40); 
-       font-size: g.vw(24);
-       @include g.mq(tab) {
-           margin-bottom: g.tabvw(32);
-           font-size: g.tabvw(24);
-           line-height: g.tabvw(35.64);
-       }
-       @include g.mq(pc) {
-           margin-bottom: g.pcvw(32);
-           font-size: g.pcvw(24);
-           line-height: g.pcvw(35.64);
-       }
+}
+
+//元p-menu__group
+.menu h4 {
+    margin-bottom: g.vw(40); 
+    font-size: g.vw(24);
+    @include g.mq(tab) {
+        margin-bottom: g.tabvw(32);
+        font-size: g.tabvw(24);
+        line-height: g.tabvw(35.64);
     }
-    &__item {
-        padding-left: g.vw(20);
-        margin-bottom: g.vw(20);
-        @include g.mq(tab) {
-            padding-left: g.tabvw(20);
-            margin-bottom: g.tabvw(20);
-            font-size: g.tabvw(20);
-            line-height: g.tabvw(29.7);
-        }
-        @include g.mq(pc) {
-            padding-left: g.pcvw(20);
-            margin-bottom: g.pcvw(20);
-            font-size: g.pcvw(20);
-            line-height: g.pcvw(29.7);
-        }
+    @include g.mq(pc) {
+        margin-bottom: g.pcvw(32);
+        font-size: g.pcvw(24);
+        line-height: g.pcvw(35.64);
+    }
+}
+
+//もと.p-menu__item
+.sub-menu li {
+    padding-left: g.vw(20);
+    margin-bottom: g.vw(20);
+    @include g.mq(tab) {
+        padding-left: g.tabvw(20);
+        margin-bottom: g.tabvw(20);
+        font-size: g.tabvw(20);
+        line-height: g.tabvw(29.7);
+    }
+    @include g.mq(pc) {
+        padding-left: g.pcvw(20);
+        margin-bottom: g.pcvw(20);
+        font-size: g.pcvw(20);
+        line-height: g.pcvw(29.7);
     }
 }
