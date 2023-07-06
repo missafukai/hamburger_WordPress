@@ -155,3 +155,10 @@
     }
 
 }
+
+//ツールバーの固定
+@media screen and (max-width: 600px){
+    #wpadminbar {
+        position: fixed;
+    }
+}

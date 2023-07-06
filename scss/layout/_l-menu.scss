@@ -10,6 +10,7 @@
     height: 100vh;
     transform: translateX(g.vw(328));
     transition: transform .3s;
+    padding-top: 32px;
     @include g.mq(tab) {
         width: g.tabvw(367);
         transform: translateX(g.tabvw(367));
@@ -20,6 +21,7 @@
         position: static;
         height: auto;
         transform: translateX(0);
+        padding-top: 0;
     }
     &.active {
         display: block;

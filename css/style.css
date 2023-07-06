@@ -568,6 +568,7 @@ ol, ul {
   height: 100vh;
   transform: translateX(87.4666666667vw);
   transition: transform 0.3s;
+  padding-top: 32px;
 }
 @media screen and (min-width: 600px) {
   .l-menu {
@@ -582,6 +583,7 @@ ol, ul {
     position: static;
     height: auto;
     transform: translateX(0);
+    padding-top: 0;
   }
 }
 .l-menu.active {
@@ -2541,5 +2543,11 @@ ol, ul {
 }
 .wp-block-button__link a {
   display: block;
+}
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed;
+  }
 }
 /*# sourceMappingURL=style.css.map */
