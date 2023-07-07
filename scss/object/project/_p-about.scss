@@ -82,10 +82,12 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: g.vw(415);
+        height: 100%;
+        max-height: g.vw(415);
         z-index: 1;
         @include g.mq(tab) {
             height: 100%;
+            max-height: none;
         }
         @include g.mq(pc) {
             height: 100%;
