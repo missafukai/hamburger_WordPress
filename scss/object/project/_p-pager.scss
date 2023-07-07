@@ -23,6 +23,16 @@
     }
 }
 
+.p-pager--tabpc {
+    display: none;
+    @include g.mq(tab) {
+        display: block;
+    }
+    @include g.mq(pc) {
+        display: block;
+    }
+}
+
 .p-pager--sp {
     display: flex;
     align-items: center;

@@ -1,6 +1,12 @@
 <nav class="p-pager__container">
     <!-- <ul class="p-pager"> -->
-        <?php wp_pagenavi();?>
+        <div class="p-pager--tabpc">
+        <?php if(is_plugin_active( 'wp-pagenavi/wp-pagenavi.php' )) {
+                wp_pagenavi(); 
+            } else {
+                echo 'WP-PageNaviプラグインを有効化してください';
+            } ?>
+        </div>
     <!-- </ul> /p-pager -->
     <?php if ( $wp_query -> max_num_pages > 1 ) : ?>
         <ul class="p-pager--sp">
