@@ -5,8 +5,10 @@
                 <div class="p-jumbotron --index" 
                     style="background-image: url(<?php if(is_plugin_active( 'advanced-custom-fields/acf.php' )) { if (get_field('banner_bg')) {
                         the_field('banner_bg');
+                    } else {
+                        echo get_theme_file_uri('/img/burger-veggie.png');
                     }} else {
-                            echo get_theme_file_uri('/img/burger-veggie.png'); 
+                        echo get_theme_file_uri('/img/burger-veggie.png'); 
                     } ?>);">
                     <h1 class="p-jumbotron__title c-title c-title--jp"><?php if(is_plugin_active( 'advanced-custom-fields/acf.php' )) {
                         the_field('page_title');
@@ -21,7 +23,7 @@
                             } else { 
                                 echo get_theme_file_uri('/img/three-burgers.png');
                             } ?>);">
-                        <a href="<?php echo get_category_link('274'); ?>">
+                        <a href="<?php echo get_category_link('3'); ?>">
                             <div class="p-card__title c-title">
                                 <h1>Take Out</h1>
                             </div> <!-- /p-card__title 1-->
@@ -59,7 +61,7 @@
                      } else {
                         echo get_theme_file_uri('/img/bacon-burger.png');
                      } ?>);">
-                        <a href="<?php echo get_category_link('273'); ?>">   
+                        <a href="<?php echo get_category_link('2'); ?>">   
                             <div class="p-card__title c-title">
                                 <h1>Eat In</h1>
                             </div> <!-- /p-card__title 2-->
