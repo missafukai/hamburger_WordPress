@@ -159,8 +159,14 @@ register_block_style(
             }'
     )
 );
-
-function custom_excerpt_more( $more ) {
-    return '';
+//抜粋の文字数の設定
+function mytheme_excerpt_length( $length ) {
+    return 85;
 }
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
+add_filter( 'excerpt_length', 'mytheme_excerpt_length', 999 );
+
+//抜粋の最後の文字を変更
+function mytheme_excerpt_more( $more ) {
+    return '...';
+}
+add_filter( 'excerpt_more', 'mytheme_excerpt_more' );

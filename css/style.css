@@ -862,7 +862,7 @@ ol, ul {
   left: 2.4vw;
   width: 6.4vw;
   height: 6.336vw;
-  background-image: url("/wp-content/themes/hamburger/img/search.png");
+  background-image: url("../img/search.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
