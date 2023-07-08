@@ -9,24 +9,20 @@
         <div class="p-archive-media__body">
             <div class="p-archive-media__content">
                 <h4 class="p-archive-media__title"><?php the_title(); ?></h4>
-                <h2><?php if(is_plugin_active( 'advanced-custom-fields/acf.php')) {
-                    the_field('menu_headline');
-                 } else {
-                     echo 'ACFプラグインを有効化してください';
-                 } ?></h2>
-                <p><?php if(is_plugin_active( 'advanced-custom-fields/acf.php')) {
-                        $excerpt = get_field('menu_excerpt');
-                        $limits = 100;
-                        if(mb_strlen($excerpt, 'UTF-8') > $limits){ 
-                            $excerpt = mb_substr($excerpt, 0, $limits, 'UTF-8'); 
-                            echo $excerpt .= '...';
-                        } else {
-                            echo $excerpt;
-                        } } else {
-                        echo 'ACFプラグインを有効化してください';
-                        } 
-                        ?></p>
-
+                <?php
+                    // 投稿内容をブロックごとに取得//
+                    // 投稿のIDを指定
+                    $post_id = get_the_ID();
+                    // 投稿のコンテンツを取得
+                    $content = get_post_field('post_content', $post_id);
+                    // コンテンツをブロック単位にパース
+                    $blocks = parse_blocks($content);
+                    // 最初のブロックを取得
+                    $first_block = $blocks[0];
+                    // 最初のブロックの内容を表示
+                    echo render_block($first_block);
+                    the_excerpt();
+                ?>
             </div>
             <div class="p-archive-media__button-wrapper">
                 <a href="<?php the_permalink(); ?>"><button class="c-button--detail p-archive-media__button">詳しく見る</button></a>
