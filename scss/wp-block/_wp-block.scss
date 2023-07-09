@@ -97,13 +97,13 @@
 }
 
 .wp-block-table td {
-    padding: g.vw(30);
+    padding: g.vw(25);
     @include g.mq(tab) {
-        padding: g.tabvw(30);
+        padding: g.tabvw(25);
         padding-top: g.tabvw(33);
     }
     @include g.mq(pc) {
-        padding: g.pcvw(30);
+        padding: g.pcvw(25);
         padding-top: g.pcvw(33);
     }
     &:nth-child(1) {
@@ -126,13 +126,17 @@
     }
 }
 
+.wp-block-button {
+    width: 100%;
+}
+
 .wp-block-button__link {
     @extend .wp-block-heading;
     border: g.vw(1) solid #707070;
     border-radius: g.vw(20);
     background-image: linear-gradient(to bottom right, #F2EDE9, #DED8D3);
     display:block;
-    width: g.vw(320);
+    width: 100%;
     height: g.vw(81);
     padding: g.vw(30);
     font-weight: 700;
